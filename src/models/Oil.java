@@ -4,7 +4,7 @@ import enums.OilType;
 
 public class Oil {
     protected Double pricePerKG;
-    protected Double productionCosts = 0.0;
+    protected Double productionCosts =0.0;
     protected OilType oilType;
 
     protected Double volumeMl;
@@ -18,7 +18,10 @@ public class Oil {
         return pricePerKG/volumeMl;
     }
     public double price50Mls(){
-        return (priceMl()-productionCosts)*50;
+        return (priceMl()*50)+productionCosts;
+    }
+    public double price30Mls(){
+        return (priceMl()*30)+productionCosts;
     }
     public double pricePerLiter(){
         return priceMl()*1000;
@@ -47,13 +50,4 @@ public class Oil {
         productionCosts = productionCosts;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Cada ml custa: "+ priceMl() +" Reais"+"\n");
-        sb.append("O frasco com cinquenta Mls custam: "+price50Mls()+" Reais"+ "\n");
-        sb.append("Um litro custa: "+pricePerLiter()+" Reais"+"\n" );
-        sb.append("Para fazer um litro precisa de: "+toOneLiter()+ "Kgs"+"\n" );
-        return sb.toString();
-    }
 }
