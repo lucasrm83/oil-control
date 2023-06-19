@@ -27,16 +27,14 @@ public class Main {
 
 
         System.out.println("Qual o tipo de oleo?: ");
-        System.out.println("1- Abacate, 2- Linhaça, 3- Girassol, 4- Abóbora");
+        System.out.println("1- Abacate, 2- Girassol, 4- Abóbora");
         int tipo = sc.nextInt();
         Oil oil;
         if (tipo == 1){
             oil = new AvocadoOil(precoKg,quantidadeMl);
         } else if (tipo ==2) {
-            oil = new LinhacaOil(precoKg,quantidadeMl);
-        } else if (tipo ==3) {
             oil = new GirassolOil(precoKg,quantidadeMl);
-        } else if (tipo == 4) {
+        } else if (tipo ==3) {
             oil = new AboboraOil(precoKg,quantidadeMl);
         }else {
             System.out.println("Comando incorreto!");
