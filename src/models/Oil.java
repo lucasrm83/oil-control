@@ -6,6 +6,7 @@ public class Oil {
     protected Double pricePerKG;
     protected Double productionCosts =0.0;
     protected OilType oilType;
+    protected Double seedGrams;
 
     protected Double volumeMl;
 
