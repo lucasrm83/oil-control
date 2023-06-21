@@ -27,7 +27,7 @@ public class Main {
 
 
         System.out.println("Qual o tipo de oleo?: ");
-        System.out.println("1- Abacate, 2- Girassol, 4- Abóbora");
+        System.out.println("1- Abacate, 2- Girassol, 3- Abóbora");
         int tipo = sc.nextInt();
         Oil oil;
         if (tipo == 1){
